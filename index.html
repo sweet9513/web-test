@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HOLLYS COFFEE</title>
+
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$(".dp2,.dp2-bg").hide();
+		
+		$("#gnb>li").mouseover(function(){
+			$(".dp2,.dp2-bg").stop().slideDown();
+		});
+		$("#gnb>li").mouseout(function(){
+			$(".dp2,.dp2-bg").stop().slideUp();
+		});
+		
+		var slider = $('.bxslider').bxSlider({
+			auto: true,
+		});
+
+		// 클릭시 멈춤 현상 해결 //
+		$(document).on('click','.bx-next, .bx-prev',function() {
+		slider.stopAuto();
+		slider.startAuto();
+		});
+		$(document).on('mouseover','.bx-pager',function() {
+		slider.stopAuto();
+		slider.startAuto();
+		});	
+	  
+	});
+</script>
+</head>
+
+<body>	
+
+
+<div id="header"><!--header-->
+    <div id="header-inner"><!--header_inner-->
+        <h1><a href="#"><img src="images/logo.gif" alt="HOLLYS COFFEE"></a></h1>    
+          
+        <ul id="gnb">
+            <li><a href="#">Menu</a>
+                <ul class="dp2">
+                    <li><a href="#">New Menu</a></li>
+                    <li><a href="#">에스프레소</a></li>
+                    <li><a href="#">라떼 &amp; 티</a></li>
+                    <li><a href="#">할리치노</a></li>
+                    <li><a href="#">베이커리</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Event</a>
+                <ul class="dp2">
+                    <li><a href="#">공지사항</a></li>  
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Membership</a>
+                <ul class="dp2">
+                	<li><a href="#">스마트오더 서비스안내</a></li>
+                    <li><a href="#">멤버십 혜택안내</a></li>  
+                	<li><a href="#">등록 및 발급</a></li>
+                </ul>
+            </li>
+            <li><a href="#">HOLLYS Mall</a>
+                <ul class="dp2">
+                    <li><a href="#">할리스콘</a></li>  
+                	<li><a href="#">할리스기프트카드</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Store</a>
+                <ul class="dp2">
+                    <li><a href="#">국내매장</a></li>  
+                    <li><a href="#">해외매장</a></li> 
+                    <li><a href="#">본사위치</a></li>
+                    <li><a href="#">혜택안내</a></li>
+                </ul>
+            </li>
+            <li><a href="#">HOLLYS is</a>
+                <ul class="dp2">
+                    <li><a href="#">할리스커피</a></li>  
+                    <li><a href="#">본사위치</a></li> 
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">가맹개설안내</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div><!--//header_inner-->
+    <div class="dp2-bg"></div>
+</div><!--//header-->
+
+
+
+<div id="main-visual">
+	<ul class="bxslider">
+    	<li class="b1">더 특별해진 프리미엄을 즐기다</li>
+        <li class="b2">신선하게 싱그러움을 펼치다</li>
+        <li class="b3">자연을 머금은 설향딸기</li>
+    </ul>
+</div>
+
+
+
+<div id="contents"><!--contents-->
+	<h2><span>HOLLYS</span> COFFEE LAB</h2>
+	<p class="comment">최고의 커피를 향한 끊임없는 노력, 할리스커피연구소</p>
+    <ul class="lab-menu">
+    	<li><a href="#"><img src="images/lab_01.jpg" alt="lab menu"></a></li>
+    	<li><a href="#"><img src="images/lab_02.jpg" alt="lab barista"></a></li>
+    </ul>
+
+    <dl class="franchise">
+    <a href="#">
+    <dt>가맹점 개설안내</dt>
+    <dd>성공 창업을 위한 선택</dd>
+    </a>
+    </dl>
+    
+    <dl class="store">
+    <dt>매장찾기</dt>
+    <dd>가까운 할리스 매장을<br>확인해 보세요</dd>
+    <dd><form><input type="text"><input type="image" src="images/search.png"></form></dd>
+    </dl>
+    
+    <div class="special-box">
+    <dl class="news">
+    <dt>할리스 소식<a href="#" class="more">more +</a></dt>
+    <dd><a href="#">할리스커피랩 영업시간 조정안내 <span class="date">2020.02.27</span></a></dd>
+    <dd><a href="#">할리스멤버스 이용약관 변경안내 <span class="date">2020.01.21</span></a></dd>
+    <dd><a href="#">할리스멤버스 서비스 일시중단안내 <span class="date">2019.11.11</span></a></dd>
+    </dl>
+    
+	<p class="brochure"><a href="#">브로슈어 다운받기</a></p>
+	</div>
+</div><!--//contents-->
+
+
+<div id="footer"><!--footer-->
+    <div id="footer-inner">
+    <ul class="foot-link">
+        <li><a href="#">할리스가족</a></li>
+        <li><a href="#">고객설문</a></li>
+        <li><a href="#">유통관리시스템</a></li>
+        <li><a href="#">상품제안</a></li>
+        <li><a href="#">고객문의</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+        <li><a href="#">서비스이용약관</a></li>
+        <li><a href="#">채용안내</a></li>
+	</ul>
+    
+    <p class="address">서울특별시 종로구 율곡로 88 삼환빌딩 8층 (주)할리스에프엔비 / 대표전화 : 02-2188-7100<br>
+    대표자 : 김유진 / 사업자등록번호 : 211-87-61044 / 통신판매업 : 제2012-서울강남-01081호<br>
+    COPYRIGHT &copy; HOLLYS COFFEE CO., LTD. All Rights Reserved.</p>
+    </div>
+</div><!--//footer-->
+
+</body>
+</html>
